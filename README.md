@@ -24,6 +24,8 @@ Usage -  `gulp sassdoc` while in the folder
 This creates the sassdoc documentation and places it into the `docs` folder.
 If you havent added and new elements (variables, mixins, functions) to the SCSS then you dont need to re-build the docs.
 
+
+### Folder and file explanation
 ```
 DEV FOLDER
 	|-modules/     #Contains all Html modules needed for the page
