@@ -3,7 +3,12 @@ A starter folder structure to get up and runnnig building a website.
 Using Gulp as our task runner we have three different Gulp Tasks.
 
 ### Gulp
-This is used for when we are in development mode. It creates a local host and watches our files and updates the browser everytime we make a change to any file.
+This is used for when we are in development mode.
+It does a couple of tasks to help us : 
+* It creates a localhost server where we can see our work
+* It will watch all our files and update the localhost when anything is changed
+* It will compile our sass and wath for errors
+* While working in any Js file is will lint our code for warnings or errors
 
 
 ### Gulp Build
