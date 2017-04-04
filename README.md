@@ -10,8 +10,8 @@ This is used for when we are in development mode.
 It does a couple of tasks to help us : 
 * It creates a localhost server where we can see our work
 * It will watch all our files and update the localhost when anything is changed
-* It will compile our sass and wath for errors
-* While working in any Js file is will lint our code for warnings or errors
+* It will compile our sass and watch for errors
+* While working in any Js file it will lint our code for warnings or errors
 
 
 ### Gulp Build
@@ -40,6 +40,7 @@ DEV FOLDER
 		|-js
 			|-plugins
 				|- all javascript plugins inside this folder.
+			|--jquery.js
 			|--jqueryui.js
 			|--settings.js
 		|-scss
@@ -90,39 +91,61 @@ All folder names should be lowercase and use hyphens.
 
 ## Descriptions
 
-###Base
+## Modules
 
-The `base/` folder holds all your base style for your project. In there, we have the reset (or Normalize.css, or whatever), probably some stuff dealing with typography, tables , lists etc. and overall styles.
+For HTML components, there is the `modules/` folder . It can contain all kinds of specific modules like a map, a loader, a carousel, searchbox or anything along those lines. 
 
-* `_reset.scss`
-* `_typography.scss`
-* `_content.scss` lists, tables etc.
-* `_forms.scss`
+* `module.html`
 
-###Components
+## Pages
 
-For smaller components, there is the `components/` folder . It can contain all kinds of specific modules like a map, a loader, a carousel, searchbox or anything along those lines. 
+These are the working pages files.  `index.html`, `inside.html` etc. Call your module files here.
 
-* `_carousel.scss`
-* `_map.scss`
-* `_searchbox.scss`
+* `index.html`
 
-### Theme
+## SRC
+This folder contains all the assets use in the site. Images , SCSS, Javascript etc.
 
-The `theme/` folder  gathers all Sass tools and helpers we’ll use across the project -  functions, mixins etc. This folder also contains a `_variables.scss` file  which holds all global variables for the project (for typography, color schemes, and so on).
- 
+### CSS
+Contains the compiled SCSS file and the Source maps for that file.
 
-* `_variables.scss`
-* `_mixins.scss`
-* `_main.scss`
+### FONTS
+Contains all the fonts included in th projects
+
+### IMG
+Any images used should be in this folder
+
+### JS
+The working Js files are conatined in this folder. The jQuery files, the js plugin files and the `settings.js`
+### SCSS
+All the SCSS is contained here in the SCSS folder and split into seperate folders.
+
+	### Base
+
+		The `base/` folder holds all your base style for your project. In there, we have the reset (or Normalize.css, or whatever), probably some stuff dealing with typography, tables , lists etc. and overall styles.
+
+		* `_reset.scss`
+		* `_typography.scss`
+		* `_content.scss` lists, tables etc.
+		* `_forms.scss`
 
 
-### Plugins
+	### Theme
 
-And last but not least, you will probably have a `plugins/` folder containing all the CSS files from external libraries and frameworks – OwlCarousel, jQueryUI and so on. These files should not be edited. Use your main stylesheets to overide any styles you need to change.
+		The `theme/` folder  gathers all Sass tools and helpers we’ll use across the project -  functions, mixins etc. This folder also contains a `_variables.scss` file  which holds all global variables for the project (for typography, color schemes, and so on).
+		 
 
-Example:
+		* `_variables.scss`
+		* `_mixins.scss`
+		* `_main.scss`
 
-* `owl-carousel.scss`
-* `jquery-ui.scss`
+
+	### Plugins
+
+		And last but not least, you will probably have a `plugins/` folder containing all the CSS files from external libraries and frameworks – OwlCarousel, jQueryUI and so on. These files should not be edited. Use your main stylesheets to overide any styles you need to change.
+
+		Example:
+
+		* `owl-carousel.scss`
+		* `jquery-ui.scss`
 
