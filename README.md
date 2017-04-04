@@ -26,13 +26,14 @@ If you havent added and new elements (variables, mixins, functions) to the SCSS 
 
 ```
 DEV FOLDER
-	|-modules/
+	|-modules/     #Contains all Html modules needed for the page
 		|--favicons.html
-	|-pages/
+	|-pages/       #The working pages for the project
 		|--index.html
 	|-src/
 		|-css
-			|-maps # Sass source maps
+			|-maps #Sass source maps
+			|--styles.css #Compiled Css file
 		|-fonts
 			|-all fonts inside this folder
 		|-img
@@ -44,7 +45,7 @@ DEV FOLDER
 			|--jqueryui.js
 			|--settings.js
 		|-scss
-			|-base
+			|-base   #Contains global settings for the project and some Css helpers
 				|--_global.scss
 				|--_helpers.scss
 			|-fonts
@@ -56,10 +57,10 @@ DEV FOLDER
 			|-presets
 				|-_bootstrap.scss
 				|-_reset.scss
-			|-settings
+			|-settings  #Contiains the variables and mixins etc for the project
 				|-_mixins.scss
 				|-_variables.scss
-			|--styles.scss
+			|--styles.scss  #Main SCSS file which calls all the other files
 	|--index.html
 
 DIST FOLDER
@@ -88,64 +89,4 @@ DOCS FOLDER - Sassdoc folder
 
 ## General
 All folder names should be lowercase and use hyphens.
-
-## Descriptions
-
-## Modules
-
-For HTML components, there is the `modules/` folder . It can contain all kinds of specific modules like a map, a loader, a carousel, searchbox or anything along those lines. 
-
-* `module.html`
-
-## Pages
-
-These are the working pages files.  `index.html`, `inside.html` etc. Call your module files here.
-
-* `index.html`
-
-## SRC
-This folder contains all the assets use in the site. Images , SCSS, Javascript etc.
-
-### CSS
-Contains the compiled SCSS file and the Source maps for that file.
-
-### FONTS
-Contains all the fonts included in th projects
-
-### IMG
-Any images used should be in this folder
-
-### JS
-The working Js files are conatined in this folder. The jQuery files, the js plugin files and the `settings.js`
-### SCSS
-All the SCSS is contained here in the SCSS folder and split into seperate folders.
-
-	### Base
-
-		The `base/` folder holds all your base style for your project. In there, we have the reset (or Normalize.css, or whatever), probably some stuff dealing with typography, tables , lists etc. and overall styles.
-
-		* `_reset.scss`
-		* `_typography.scss`
-		* `_content.scss` lists, tables etc.
-		* `_forms.scss`
-
-
-	### Theme
-
-		The `theme/` folder  gathers all Sass tools and helpers we’ll use across the project -  functions, mixins etc. This folder also contains a `_variables.scss` file  which holds all global variables for the project (for typography, color schemes, and so on).
-		 
-
-		* `_variables.scss`
-		* `_mixins.scss`
-		* `_main.scss`
-
-
-	### Plugins
-
-		And last but not least, you will probably have a `plugins/` folder containing all the CSS files from external libraries and frameworks – OwlCarousel, jQueryUI and so on. These files should not be edited. Use your main stylesheets to overide any styles you need to change.
-
-		Example:
-
-		* `owl-carousel.scss`
-		* `jquery-ui.scss`
 
