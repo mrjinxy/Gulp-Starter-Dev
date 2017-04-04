@@ -26,61 +26,62 @@ If you havent added and new elements (variables, mixins, functions) to the SCSS 
 
 ```
 DEV FOLDER
-		|-modules/
-				|--favicons.html
-		|-pages/
-				|--index.html
-		|-src/
-				|-css
-						|-maps # Sass source maps
-				|-fonts
-						|-all fonts inside this folder
-				|-img
-						|-all images in this folder
-				|-js
-						|-plugins
-								|- all javascript plugins inside this folder.
-						|--jqueryui.js
-						|--settings.js
-				|-scss
-						|-base
-								|--_global.scss
-								|--_helpers.scss
-						|-fonts
-								|--_basicarrows.scss
-						|-modules
-								|- all modules from pages inside this folder in seperate files/
-						|-plugins
-								|- all plugin scss files inside this folder
-						|-presets
-								|-_bootstrap.scss
-								|-_reset.scss
-						|-settings
-								|-_mixins.scss
-								|-_variables.scss
-						|--styles.scss
+	|-modules/
+		|--favicons.html
+	|-pages/
 		|--index.html
+	|-src/
+		|-css
+			|-maps # Sass source maps
+		|-fonts
+			|-all fonts inside this folder
+		|-img
+			|-all images in this folder
+		|-js
+			|-plugins
+				|- all javascript plugins inside this folder.
+			|--jqueryui.js
+			|--settings.js
+		|-scss
+			|-base
+				|--_global.scss
+				|--_helpers.scss
+			|-fonts
+				|--_basicarrows.scss
+			|-modules
+				|- all modules from pages inside this folder in seperate files/
+			|-plugins
+				|- all plugin scss files inside this folder
+			|-presets
+				|-_bootstrap.scss
+				|-_reset.scss
+			|-settings
+				|-_mixins.scss
+				|-_variables.scss
+			|--styles.scss
+	|--index.html
 
 DIST FOLDER
-		|-src
-				|-css
-						|-styles.min.css # outputted and minified CSS file
-				|-fonts
-						|-outputted fonts inside this folder
-				|-img
-						|-all images in this folder
-				|-js
-						|-main.min.js #outputted and minified JS file
-		|--index.html
+	|-src
+		|-css
+			|-styles.min.css # outputted and minified CSS file
+		|-fonts
+			|-outputted fonts inside this folder
+		|-img
+			|-all images in this folder
+		|-js
+				|-main.min.js #outputted and minified JS file
+	|--index.html
+
 DOCS FOLDER - Sassdoc folder
-		|-assets
-				|-css
-						|-main.css
-				|-images
-						|-all images inside this folder for Sassdocs
-				|-js
-						|-main.min.js
-		|--index.html
+	|-assets
+		|-css
+			|-main.css
+		|-images
+			|-all images inside this folder for Sassdocs
+		|-js
+			|-main.min.js
+	|--index.html
 	
 ```
 
