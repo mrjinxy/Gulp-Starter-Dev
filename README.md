@@ -2,11 +2,11 @@
 A starter folder structure to get up and runnnig building a website.
 Using Gulp as our task runner we have three different Gulp Tasks.
 
-###Gulp
+### Gulp
 This is used for when we are in development mode. It creates a local host and watches our files and updates the browser everytime we make a change to any file.
 
 
-###Gulp Build
+### Gulp Build
 
 ```
 index.html
