@@ -15,55 +15,74 @@ It does a couple of tasks to help us :
 
 
 ### Gulp Build
+Usage -  `gulp build` while in the folder
+This is used when developement is finished and the project and all its assets are to be minified and sent to the `dist` folder
+
+
+### Gulp Sassdoc
+Usage -  `gulp sassdoc` while in the folder
+This creates the sassdoc documentation and places it into the `docs` folder.
+If you havent added and new elements (variables, mixins, functions) to the SCSS then you dont need to re-build the docs.
 
 ```
-index.html
-files
-  js/
-	|- settings-home.js
-	|- plugins/
-	|   |-plugins.js //All plugins Js go here. Minify first.
-  css/
-    |- styles.css
-  images/
-  fonts/
-  includes/
-  	|-menu.html		   # Include files from here to your page
-  pages/			   # ALways work in these files which output
-  	|-index.html		   # to the root of the folder.
-  	|-inside.html
-  scss/ 
-	|– styles.scss             # primary Sass file 
-	| 
-	|– base/ 
-	    |– _reset.scss         # Reset/normalize
-	    |- _content.scss       # Base styling fortypography ul, li , tables etc.
-	    |– _forms.scss         # Forms
-	    ...                    # Etc… 
-	 
-	|– components/ 
-	    |– _carousel.scss      # Carousel Rules
-	    |– _map.scss           # Map rules 
-	    |-_searchbox.scss      # Searcbox Styles
-	    ...                    # Etc… 
-  
-	|– theme/ 
-	    |– _variables.scss     # Sass Variables 
-	    |– _mixins.scss        # Sass Mixins 
-	    |– _main.scss          # All main styles 
-	    ...                    # Etc… 
-	  
-	|– plugins/ 
-	    |– _owl-carousel.scss  # Owl Carousel
-	    |– _jquery-ui.scss     # jQuery UI 
-	    ...                    # Etc… 
+DEV FOLDER
+		|-modules/
+				|--favicons.html
+		|-pages/
+				|--index.html
+		|-src/
+				|-css
+						|-maps # Sass source maps
+				|-fonts
+						|-all fonts inside this folder
+				|-img
+						|-all images in this folder
+				|-js
+						|-plugins
+								|- all javascript plugins inside this folder.
+						|--jqueryui.js
+						|--settings.js
+				|-scss
+						|-base
+								|--_global.scss
+								|--_helpers.scss
+						|-fonts
+								|--_basicarrows.scss
+						|-modules
+								|- all modules from pages inside this folder in seperate files/
+						|-plugins
+								|- all plugin scss files inside this folder
+						|-presets
+								|-_bootstrap.scss
+								|-_reset.scss
+						|-settings
+								|-_mixins.scss
+								|-_variables.scss
+						|--styles.scss
+		|--index.html
+
+DIST FOLDER
+		|-src
+				|-css
+						|-styles.min.css # outputted and minified CSS file
+				|-fonts
+						|-outputted fonts inside this folder
+				|-img
+						|-all images in this folder
+				|-js
+						|-main.min.js #outputted and minified JS file
+		|--index.html
+DOCS FOLDER - Sassdoc folder
+		|-assets
+				|-css
+						|-main.css
+				|-images
+						|-all images inside this folder for Sassdocs
+				|-js
+						|-main.min.js
+		|--index.html
 	
 ```
-## How To
-Download folder
-Using the command line navigate to that folder.
-run ```npm install``` 
-When thats done run ```gulp```
 
 ## General
 All folder names should be lowercase and use hyphens.
