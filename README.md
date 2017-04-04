@@ -1,8 +1,11 @@
 ## GULP STARTER DEV
 A starter folder structure to get up and runnnig building a website.
 Using Gulp as our task runner we have three different Gulp Tasks.
+Download and navigate to the folder.
+Use the command 'npm install' to install all node modules
 
 ### Gulp
+Usage -  'gulp' while in the folder
 This is used for when we are in development mode.
 It does a couple of tasks to help us : 
 * It creates a localhost server where we can see our work
