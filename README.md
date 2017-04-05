@@ -34,6 +34,8 @@ DEV FOLDER
 		|--index.html
 	|-src/
 		|-css
+			|-fonts #Fonts for plugins here only
+			|-img   #Images for plugins here only
 			|-maps #Sass source maps
 			|--styles.css #Compiled Css file
 		|-fonts
