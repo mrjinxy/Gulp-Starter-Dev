@@ -27,7 +27,7 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-  sequence(['includes', 'sass', 'clean:dist'], ['minify:jscss','copy:fonts','minify:img'],['minify:html'], callback);
+  sequence(['includes', 'sass', 'clean:dist'], ['minify:jscss','copy:fonts','copy:plugins','minify:img'],['minify:html'], callback);
 });
 
 gulp.task('browsersync', function() {
@@ -109,6 +109,11 @@ gulp.task('minify:html', function() {
 gulp.task('copy:fonts', function () {
     return gulp.src('dev/src/fonts/**/*')
       .pipe(gulp.dest('dist/src/fonts/'));
+});
+
+gulp.task('copy:plugins', function () {
+    return gulp.src('dev/src/css/**/*')
+      .pipe(gulp.dest('dist/src/css/'));
 });
 
 
